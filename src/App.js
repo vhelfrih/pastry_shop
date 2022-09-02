@@ -1,16 +1,25 @@
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
-// import Home from "./pages/Home";
-// import Menu from "./pages/Menu";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Locations from "./pages/Locations";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
-    <div className="App">
-     Pastry Shop
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/menu" exact element={<Menu />} />
+        <Route path="/contact" exact element={<Contact />} />
+        <Route path="/locations" exact element={<Locations />} />
+      </Routes>
+      <Hero/>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
