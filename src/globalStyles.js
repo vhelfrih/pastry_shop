@@ -22,9 +22,8 @@ export const MainHeading = styled.h1`
   margin-top: 2rem;
   margin-left: 1.5rem;
   width: 100%;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   color: #D01416;
-  letter-spacing: 1.5px;
   line-height: 24px;
   text-transform: uppercase;
   transition: width 0.15s ease 0s;

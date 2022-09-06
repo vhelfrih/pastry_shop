@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
         <MainContainer>
           <FaBirthdayCake color="#D01416" fontSize={"3rem"} />
-          <MainHeading>Pastry Shop</MainHeading>
+          <MainHeading>Mocha Patisserie</MainHeading>
           Hungry for Cakes? Check Our Fancy Products!
           <Button>Pickup</Button>
           <Button>Delivery</Button>

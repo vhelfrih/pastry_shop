@@ -13,9 +13,8 @@ export const MainContainer = styled.div`
 `;
 
 export const MenuContainer = styled.div`
-  /* min-width: 1100px; */
   min-height: 2em;
-  margin-right: 16em;
+  margin-right: 3em;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
