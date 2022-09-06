@@ -64,3 +64,20 @@ export const CarouselBottom = styled.div`
   border-bottom: 2px solid white;
   cursor: pointer;
 `;
+
+export const CarouselTitle = styled.h2`
+  color: #604738;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 4px;
+  font-weight: 800;
+`;
+
+export const CarouselText = styled.p`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+`;

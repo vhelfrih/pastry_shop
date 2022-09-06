@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {
+  CarouselTitle,
+  CarouselText,
   CarouselBottom,
   CarouselContainer,
   ImgContainer,
@@ -9,12 +11,11 @@ import { Button } from "../../globalStyles";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { BsDot } from "react-icons/bs";
-import img1 from '../../assets/baby_01.webp'
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = images.length;
-  
+
   const nextImage = () => {
     setCurrentIndex(currentIndex === length - 1 ? 0 : currentIndex + 1);
   };
@@ -30,13 +31,19 @@ const Carousel = ({ images }) => {
   return (
     <CarouselContainer>
       <ImgContainer>
-        <FaArrowAltCircleLeft onClick={prevImage}
+        <FaArrowAltCircleLeft
+          onClick={prevImage}
           style={{ marginRight: "5em", fontSize: "2.2em", cursor: "pointer" }}
         />
-        <ProductImg
-          src={images.map((img) => img)}
-        />
-        <FaArrowAltCircleRight onClick={nextImage}
+        {images.map((img, idx) => (
+          <>
+            <ProductImg src={img.url} />
+            <CarouselTitle>{img.title}</CarouselTitle>
+            <CarouselText>{img.text}</CarouselText>
+          </>
+        ))}
+        <FaArrowAltCircleRight
+          onClick={nextImage}
           style={{ marginLeft: "5em", fontSize: "2.2em", cursor: "pointer" }}
         />
         {/* <ProductImg src={mainImg03} alt="baby_cake" />
@@ -45,13 +52,16 @@ const Carousel = ({ images }) => {
         <ProductImg src={mainImg02} alt="heart_cake" /> */}
       </ImgContainer>
       <CarouselBottom>
-      {images.map((images, currentIndex) => (
-        <BsDot key={currentIndex}
-        onClick={() => nextImage(currentIndex)} style={{ fontSize: "3em", marginRight: "4px", cursor: "pointer" }}/>))}
+        {images.map((images, currentIndex) => (
+          <BsDot
+            key={currentIndex}
+            onClick={() => nextImage(currentIndex)}
+            style={{ fontSize: "3em", marginRight: "4px", cursor: "pointer" }}
+          />
+        ))}
       </CarouselBottom>
       <hr style={{ "border-top": "2px solid #D01416" }} />
     </CarouselContainer>
-
 
     // <CarouselContainer>
     //   <ImgContainer>
