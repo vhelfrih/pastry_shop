@@ -6,10 +6,10 @@ import {
   CarouselContainer,
   ImgContainer,
   ProductImg,
+  LeftIcon,
+  RightIcon,
 } from "./CarouselElements";
 import { Button } from "../../globalStyles";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import { BsDot } from "react-icons/bs";
 
 const Carousel = ({ images }) => {
@@ -31,10 +31,7 @@ const Carousel = ({ images }) => {
   return (
     <CarouselContainer>
       <ImgContainer>
-        <FaArrowAltCircleLeft
-          onClick={prevImage}
-          style={{ marginRight: "5em", fontSize: "2.2em", cursor: "pointer" }}
-        />
+          <LeftIcon onClick={prevImage} size="38" />
         {images.map((img, idx) => (
           <>
             <ProductImg src={img.url} />
@@ -42,10 +39,8 @@ const Carousel = ({ images }) => {
             <CarouselText>{img.text}</CarouselText>
           </>
         ))}
-        <FaArrowAltCircleRight
-          onClick={nextImage}
-          style={{ marginLeft: "5em", fontSize: "2.2em", cursor: "pointer" }}
-        />
+        <RightIcon onClick={nextImage} size="38" />
+        
         {/* <ProductImg src={mainImg03} alt="baby_cake" />
         <Button>Summer Selections</Button>
         <ProductImg src={mainImg01} alt="choco_cake" />

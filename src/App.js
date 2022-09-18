@@ -7,10 +7,10 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
 import Carousel from "./components/Carousel/Carousel";
 
-import {images} from './components/Carousel/CarouselData'
+import { images } from "./components/Carousel/CarouselData";
+import Hero from "./components/Hero/Hero";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Navbar />
@@ -20,7 +20,8 @@ function App() {
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/locations" exact element={<Locations />} />
       </Routes>
-      <Carousel images={images}/>
+      <Carousel images={images} />
+      <Hero />
       <Footer />
     </BrowserRouter>
   );
