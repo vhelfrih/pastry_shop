@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "../../globalStyles";
+import img1 from "../../assets/baby_01.webp";
+import img2 from "../../assets/baby_01.webp";
 import {
   HeroBtn,
   HeroCard,
@@ -14,16 +16,24 @@ import {
   HeroItems,
   HeroP,
   HeroTitle,
+  HeroTitleContainer,
+  HeroTitleText,
 } from "./HeroElements";
 
 const Hero = () => {
   return (
     <HeroContainer>
       <HeroContent>
-      <HeroIcon size="38" />
-      <HeroTitle>Locations</HeroTitle>
+        <HeroTitleContainer>
+          <HeroIcon size="38" />
+          <HeroTitle>Locations</HeroTitle>
+          <HeroTitleText>
+            With 29 Boudin SFs and our flagship location on Fisherman's Wharf,
+            there are lots of ways to enjoy Boudin.
+          </HeroTitleText>
+        </HeroTitleContainer>
         <HeroItems>
-          <HeroImg />
+          <HeroImg src={require('../../assets/choco_01.webp')} />
           <HeroCard>
             <HeroCardIcon size="80" />
             <HeroCardTextWrapper>
@@ -39,9 +49,8 @@ const Hero = () => {
           </HeroCard>
         </HeroItems>
         <HeroItems>
-          <HeroImg />
           <HeroCard>
-          <HeroCardIcon2 size="80" />
+            <HeroCardIcon2 size="80" />
             <HeroCardTextWrapper>
               <HeroH3>Downtown SF</HeroH3>
               <HeroP>
@@ -53,7 +62,14 @@ const Hero = () => {
             </HeroCardTextWrapper>
             <Button>Flagship Info</Button>
           </HeroCard>
+          <HeroImg src={require('../../assets/heart_01.webp')} />
         </HeroItems>
+        {/* <HeroTitleContainer>
+          <HeroIcon size="38" />
+          <HeroTitle>FEATURED MENU ITEMS</HeroTitle>
+          <HeroTitleText>Available at Boudin SF locations. Menus may vary by location.
+          </HeroTitleText>
+        </HeroTitleContainer> */}
       </HeroContent>
     </HeroContainer>
   );
