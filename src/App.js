@@ -9,6 +9,7 @@ import Carousel from "./components/Carousel/Carousel";
 
 import { images } from "./components/Carousel/CarouselData";
 import Hero from "./components/Hero/Hero";
+import HeroImage from "./components/HeroImage/HeroImage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Routes>
       <Carousel images={images} />
       <Hero />
+      <HeroImage />
       <Footer />
     </BrowserRouter>
   );
