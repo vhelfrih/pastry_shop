@@ -105,6 +105,7 @@ export const Button = styled.button`
   /* white-space: nowrap; */
   /* padding: 10px 20px; */
   margin-right: 1.4rem;
+  margin-left: auto;
   height: 2.5rem;
   width: 12rem;
   font-size: 14px;

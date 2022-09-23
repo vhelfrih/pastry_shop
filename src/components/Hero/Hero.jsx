@@ -1,8 +1,7 @@
 import React from "react";
 import { Button } from "../../globalStyles";
-import img1 from "../../assets/baby_01.webp";
-import img2 from "../../assets/baby_01.webp";
 import {
+  HeroBottomImg,
   HeroBtn,
   HeroCard,
   HeroCardIcon,
@@ -18,6 +17,7 @@ import {
   HeroTitle,
   HeroTitleContainer,
   HeroTitleText,
+  MenuImgContainer,
 } from "./HeroElements";
 
 const Hero = () => {
@@ -27,13 +27,13 @@ const Hero = () => {
         <HeroTitleContainer>
           <HeroIcon size="38" />
           <HeroTitle>Locations</HeroTitle>
-          <HeroTitleText>
-            With 29 Boudin SFs and our flagship location on Fisherman's Wharf,
-            there are lots of ways to enjoy Boudin.
-          </HeroTitleText>
         </HeroTitleContainer>
+        <HeroTitleText>
+          With 29 Boudin SFs and our flagship location on Fisherman's Wharf,
+          there are lots of ways to enjoy Boudin.
+        </HeroTitleText>
         <HeroItems>
-          <HeroImg src={require('../../assets/choco_01.webp')} />
+          <HeroImg src={require("../../assets/choco_01.webp")} />
           <HeroCard>
             <HeroCardIcon size="80" />
             <HeroCardTextWrapper>
@@ -62,14 +62,22 @@ const Hero = () => {
             </HeroCardTextWrapper>
             <Button>Flagship Info</Button>
           </HeroCard>
-          <HeroImg src={require('../../assets/heart_01.webp')} />
+          <HeroImg src={require("../../assets/choco_01.webp")} />
         </HeroItems>
-        {/* <HeroTitleContainer>
+        <HeroTitleContainer>
           <HeroIcon size="38" />
           <HeroTitle>FEATURED MENU ITEMS</HeroTitle>
-          <HeroTitleText>Available at Boudin SF locations. Menus may vary by location.
-          </HeroTitleText>
-        </HeroTitleContainer> */}
+          <Button>See Full Menu</Button>
+          <Button>Order Now</Button>
+        </HeroTitleContainer>
+        <HeroTitleText>
+          Available at Boudin SF locations. Menus may vary by location.
+        </HeroTitleText>
+        <MenuImgContainer>
+          <HeroBottomImg src={require("../../assets/choco_01.webp")} />
+          <HeroBottomImg src={require("../../assets/choco_01.webp")} />
+          <HeroBottomImg src={require("../../assets/choco_01.webp")} />
+        </MenuImgContainer>
       </HeroContent>
     </HeroContainer>
   );
