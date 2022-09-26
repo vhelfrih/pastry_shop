@@ -9,7 +9,6 @@ import {
   LeftIcon,
   RightIcon,
 } from "./CarouselElements";
-import { Button } from "../../globalStyles";
 import { BsDot } from "react-icons/bs";
 
 const Carousel = ({ images }) => {

@@ -10,10 +10,12 @@ import Carousel from "./components/Carousel/Carousel";
 import { images } from "./components/Carousel/CarouselData";
 import Hero from "./components/Hero/Hero";
 import HeroImage from "./components/HeroImage/HeroImage";
+import GlobalStyle from "./globalStyles";
 
 function App() {
   return (
     <BrowserRouter>
+    <GlobalStyle/>
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />

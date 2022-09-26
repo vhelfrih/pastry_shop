@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "../../globalStyles";
 import {
   HeroBottomImg,
-  HeroBtn,
   HeroCard,
   HeroCardIcon,
   HeroCardIcon2,
@@ -18,6 +17,7 @@ import {
   HeroTitleContainer,
   HeroTitleText,
   MenuImgContainer,
+  ButtonContainer
 } from "./HeroElements";
 
 const Hero = () => {
@@ -52,12 +52,12 @@ const Hero = () => {
           <HeroCard>
             <HeroCardIcon2 size="80" />
             <HeroCardTextWrapper>
-              <HeroH3>Downtown SF</HeroH3>
+              <HeroH3>Downtown</HeroH3>
               <HeroP>
-                Home of our mother dough—flagship of our brand. This beautiful
-                building is the place to see the bakers at work, dine with a
-                view or in a casual cafe, and learn the full story of our famous
-                sourdough bread and the city that made it possible.
+                Home of our mother pastry — flagship of our brand. This
+                beautiful building is the place to see the bakers at work, dine
+                with a view or in a casual cafe learn the full story of our
+                famous cookies and the city that made it possible.
               </HeroP>
             </HeroCardTextWrapper>
             <Button>Flagship Info</Button>
@@ -67,11 +67,13 @@ const Hero = () => {
         <HeroTitleContainer>
           <HeroIcon size="38" />
           <HeroTitle>FEATURED MENU ITEMS</HeroTitle>
-          <Button>See Full Menu</Button>
-          <Button>Order Now</Button>
+          <ButtonContainer>
+            <Button>See Full Menu</Button>
+            <Button>Order Now</Button>
+          </ButtonContainer>
         </HeroTitleContainer>
         <HeroTitleText>
-          Available at Boudin SF locations. Menus may vary by location.
+          Available at various locations. Menus may differ by location.
         </HeroTitleText>
         <MenuImgContainer>
           <HeroBottomImg src={require("../../assets/choco_01.webp")} />

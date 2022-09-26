@@ -21,7 +21,9 @@ export const HeroContent = styled.div`
 
 export const HeroTitleContainer = styled.div`
   display: flex;
+  align-items: center;
   width: 100%;
+  margin-top: 3.6em;
 `;
 
 export const HeroIcon = styled(Leaf)`
@@ -34,6 +36,13 @@ export const HeroTitle = styled.h2`
   color: #604738;
   letter-spacing: 4px;
   position: relative;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  gap: 2em;
 `;
 
 export const HeroTitleText = styled.p`
