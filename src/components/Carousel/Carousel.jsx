@@ -30,20 +30,13 @@ const Carousel = ({ images }) => {
   return (
     <CarouselContainer>
       <ImgContainer>
-          <LeftIcon onClick={prevImage} size="38" />
-        {images.map((img, idx) => (
+        <LeftIcon onClick={prevImage} size="38" />
           <>
-            <ProductImg src={img.url} />
-            <CarouselTitle>{img.title}</CarouselTitle>
-            <CarouselText>{img.text}</CarouselText>
+            <ProductImg src={images[currentIndex].url} />
+            <CarouselTitle>{images[currentIndex].title}</CarouselTitle>
+            <CarouselText>{images[currentIndex].text}</CarouselText>
           </>
-        ))}
         <RightIcon onClick={nextImage} size="38" />
-        
-        {/* <ProductImg src={mainImg03} alt="baby_cake" />
-        <Button>Summer Selections</Button>
-        <ProductImg src={mainImg01} alt="choco_cake" />
-        <ProductImg src={mainImg02} alt="heart_cake" /> */}
       </ImgContainer>
       <CarouselBottom>
         {images.map((images, currentIndex) => (
@@ -56,17 +49,6 @@ const Carousel = ({ images }) => {
       </CarouselBottom>
       <hr style={{ "border-top": "2px solid #D01416" }} />
     </CarouselContainer>
-
-    // <CarouselContainer>
-    //   <ImgContainer>
-    //     <ProductImg src={mainImg03} alt="baby_cake" />
-    //     <Button>Summer Selections</Button>
-    //     <ProductImg src={mainImg01} alt="choco_cake" />
-    //     <ProductImg src={mainImg02} alt="heart_cake" />
-    //   </ImgContainer>
-    //   <CarouselBottom>dots</CarouselBottom>
-    //   <hr style={{"border-top":"2px solid #D01416" }}/>
-    // </CarouselContainer>
   );
 };
 
