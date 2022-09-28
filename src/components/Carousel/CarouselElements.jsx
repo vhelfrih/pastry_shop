@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { ArrowLeftCircleFill, ArrowRightCircleFill } from "@styled-icons/bootstrap";
+import {
+  ArrowLeftCircleFill,
+  ArrowRightCircleFill,
+} from "@styled-icons/bootstrap";
+import {decor} from "../../assets/decor-bottom.png"
 
 export const CarouselContainer = styled.div`
   color: #faead2;
@@ -12,52 +16,35 @@ export const CarouselContainer = styled.div`
 export const ImgContainer = styled.div`
   display: flex;
   position: relative;
-  justify-content: space-between;
+  justify-content: center;
   background-position: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 70vh;
   margin: 0 auto;
+  gap: 2em;
 `;
 
 export const LeftIcon = styled(ArrowLeftCircleFill)`
-position: absolute;
-margin-left: -3.4em;
-cursor: pointer;
-`
+  position: absolute;
+  color: #604738;
+  top: 50%;
+  left: 1em;
+  cursor: pointer;
+`;
 export const RightIcon = styled(ArrowRightCircleFill)`
-position: absolute;
-right: -2em;
-cursor: pointer;
-`
+  position: absolute;
+  color: #604738;
+  top: 50%;
+  right: 1em;
+  cursor: pointer;
+`;
 
 export const ProductImg = styled.img`
-  /* min-height: 1em;
-  min-width: 1em;
-  max-width: 30%; */
   margin: 1em 0;
-  width: 55vh;
-  height: 55vh;
+  height: 90%;
+  max-width: 100%;
   object-fit: contain;
-  
-  /* &:first-of-type {
-    align-self: flex-end;
-    height: 55vh;
-    width: 55vw;
-    margin-left: -7em;
-    margin-right: 1em;
-    margin-bottom: 3.5em;
-  }
-  &:last-of-type {
-    max-height: 55vh;
-    width: 55vw;
-    align-self: flex-start;
-    margin-top: -5em;
-    margin-right: -5em;
-    margin-bottom: 2em;
-    /* how to crop the top of the picture?*/
-    /* overflow: hidden;
-  } */ 
 `;
 
 export const CarouselBottom = styled.div`
@@ -70,6 +57,14 @@ export const CarouselBottom = styled.div`
   cursor: pointer;
 `;
 
+export const CarouselTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 18em;
+`;
+
 export const CarouselTitle = styled.h2`
   color: #604738;
   display: flex;
@@ -77,7 +72,8 @@ export const CarouselTitle = styled.h2`
   text-align: center;
   font-size: 2em;
   letter-spacing: 4px;
-  font-weight: 800;
+  font-weight: bold;
+  margin-bottom: 0.5em;
   text-transform: uppercase;
 `;
 
@@ -85,5 +81,10 @@ export const CarouselText = styled.p`
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.2em;
+  padding-bottom: 2em;
+
+
 `;

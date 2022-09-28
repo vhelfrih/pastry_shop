@@ -6,24 +6,19 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+  transition: "width" 0.15s ease;
 }
-`;
-
-export const Container = styled.div`
-  min-width: 1300px;
-  @media screen and (max-width: 960px) {
-    padding: 0 30px;
-  }
 `;
 
 export const Button = styled.button`
   background: #d01416;
-  height: 2.5rem;
-  width: 12rem;
+  min-height: 2.5em;
+  min-width: 12em;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.2px;
   color: #fff;
+  padding: 8px;
   border: 3px solid #d01416;
   cursor: pointer;
   text-transform: uppercase;

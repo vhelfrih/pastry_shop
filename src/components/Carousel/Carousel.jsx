@@ -8,8 +8,10 @@ import {
   ProductImg,
   LeftIcon,
   RightIcon,
+  CarouselTextContainer,
 } from "./CarouselElements";
 import { BsDot } from "react-icons/bs";
+import { Button } from "../../globalStyles";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,13 +32,16 @@ const Carousel = ({ images }) => {
   return (
     <CarouselContainer>
       <ImgContainer>
-        <LeftIcon onClick={prevImage} size="38" />
-          <>
-            <ProductImg src={images[currentIndex].url} />
+        <LeftIcon onClick={prevImage} size="36" />
+        <>
+          <ProductImg src={images[currentIndex].url} />
+          <CarouselTextContainer>
             <CarouselTitle>{images[currentIndex].title}</CarouselTitle>
             <CarouselText>{images[currentIndex].text}</CarouselText>
-          </>
-        <RightIcon onClick={nextImage} size="38" />
+            <Button>{images[currentIndex].buttonText}</Button>
+          </CarouselTextContainer>
+        </>
+        <RightIcon onClick={nextImage} size="36" />
       </ImgContainer>
       <CarouselBottom>
         {images.map((images, currentIndex) => (

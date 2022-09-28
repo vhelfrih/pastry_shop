@@ -1,23 +1,25 @@
 import React from "react";
 import { Button } from "../../globalStyles";
-import { FaBirthdayCake } from "react-icons/fa";
+
 import {
   HeadingContainer,
-  List,
   ListItem,
   MainContainer,
   MenuContainer,
   SubHeading,
   MainHeading,
   LogoContainer,
+  MainIcon,
+  MobileHeading,
 } from "./NavbarElements";
 
 const Navbar = () => {
   return (
     <MainContainer>
-      
+
       <LogoContainer>
-        <FaBirthdayCake color="#D01416" fontSize={"3rem"} />
+        <MobileHeading>M</MobileHeading>
+        <MainIcon />
         <MainHeading>Mocha Patisserie</MainHeading>
       </LogoContainer>
 
@@ -27,7 +29,7 @@ const Navbar = () => {
         <Button>Delivery</Button>
         <Button>Catering</Button>
       </HeadingContainer>
-
+      
       <MenuContainer>
         <ListItem>Steve's Pastry Shop</ListItem>
         <ListItem>Menu</ListItem>
