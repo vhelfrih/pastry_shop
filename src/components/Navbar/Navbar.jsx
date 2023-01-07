@@ -18,7 +18,7 @@ const Navbar = () => {
     <MainContainer>
 
       <LogoContainer>
-        <MobileHeading>M</MobileHeading>
+        <MobileHeading>Mocha</MobileHeading>
         <MainIcon />
         <MainHeading>Mocha Patisserie</MainHeading>
       </LogoContainer>

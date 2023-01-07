@@ -24,7 +24,7 @@ export const LogoContainer = styled.div`
 
 export const HeadingContainer = styled.div`
   min-height: 2em;
-  max-width: 40em;
+  max-width: 70em;
   margin: 1em;
   margin-top: -4em;
   display: none;
@@ -33,7 +33,7 @@ export const HeadingContainer = styled.div`
   justify-content: flex-end;
   gap: 1em;
 
-  @media (min-width: 70em) {
+  @media (max-width: 70em) {
     display: flex;
   }
 `;
@@ -75,9 +75,7 @@ export const MainHeading = styled.h1`
 export const MobileHeading = styled.h1`
   font-size: 5rem;
   font-weight: 900;
-  margin-left: 1.5em;
-  margin-right: 2em;
-  margin-top: 0.4em;
+  margin: 0.4em 1.65em;
   -webkit-text-stroke: 2px #604738;
   text-shadow:
    -1px -1px 0 #ccc,  
@@ -108,8 +106,12 @@ export const MenuContainer = styled.div`
   min-height: 2em;
   max-width: 40em;
   margin-right: 1em;
-  display: flex;
+  display: none;
   align-self: flex-end;
+  
+  @media (min-width: 70em) {
+    display: flex;
+  }
 `;
 
 export const ListItem = styled.li`

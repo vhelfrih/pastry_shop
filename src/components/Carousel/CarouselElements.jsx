@@ -3,7 +3,7 @@ import {
   ArrowLeftCircleFill,
   ArrowRightCircleFill,
 } from "@styled-icons/bootstrap";
-import {decor} from "../../assets/decor-bottom.png"
+import { decor } from "../../assets/decor-bottom.png";
 
 export const CarouselContainer = styled.div`
   color: #faead2;
@@ -23,6 +23,10 @@ export const ImgContainer = styled.div`
   height: 70vh;
   margin: 0 auto;
   gap: 2em;
+/* @media (max-width: 4em) {
+  flex-direction: column;
+  
+  } */
 `;
 
 export const LeftIcon = styled(ArrowLeftCircleFill)`
@@ -66,25 +70,31 @@ export const CarouselTextContainer = styled.div`
 `;
 
 export const CarouselTitle = styled.h2`
+  font-size: 1.2rem;
   color: #604738;
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 2em;
   letter-spacing: 4px;
   font-weight: bold;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+
+  @media (min-width: 40em) {
+    font-size: 2rem;
+  }
 `;
 
 export const CarouselText = styled.p`
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.2em;
   padding-bottom: 2em;
 
-
+  @media (min-width: 40em) {
+    font-size: 1.4rem;
+  }
 `;
